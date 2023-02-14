@@ -32,6 +32,11 @@ Route::get('command:key', function () {
 });
 
 Route::get('command:migrate', function () {
+    Artisan::call('migrate');
+    return "Database migration generated";
+});
+
+Route::get('command:migrate_refresh', function () {
     Artisan::call('migrate:refresh');
     return "Database migration generated";
 });
