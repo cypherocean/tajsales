@@ -40,6 +40,12 @@
                         </li>
                     </ul>
                 </li>
+                <li class="sidebar-item {{ Request::is('admin/team*') ? 'selected' : '' }}">
+                    <a class="sidebar-link {{ Request::is('admin/team*') ? 'active' : '' }}" href="{{ route('admin.team.index') }}" aria-expanded="false">
+                        <i class="fa fa-user-circle"></i>
+                        <span class="hide-menu">Our Team</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

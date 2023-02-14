@@ -91,7 +91,7 @@ Route::group(['middleware' => ['prevent-back-history'], 'prefix' => 'admin', 'na
         Route::post('profile-update', 'DashboardController@profile_update')->name('profile.update');
         /** profile */
 
-        /** Gallery Category */
+        /** Product Category */
         Route::controller(ProductCategoryController::class)
             ->prefix('product-category')
             ->name('product_category.')
@@ -103,9 +103,9 @@ Route::group(['middleware' => ['prevent-back-history'], 'prefix' => 'admin', 'na
                 Route::patch('/update', 'update')->name('update');
                 Route::post('/change-status', 'change_status')->name('change.status');
             });
-        /** Gallery Category */
+        /** Product Category */
         
-        /** Gallery */
+        /** Product */
         Route::controller(ProductController::class)
             ->prefix('product')
             ->name('product.')
@@ -120,7 +120,24 @@ Route::group(['middleware' => ['prevent-back-history'], 'prefix' => 'admin', 'na
                 Route::post('/image-store', 'image_store')->name('image.store');
                 Route::post('/image-remove', 'image_remove')->name('image.remove');
             });
-        /** Gallery */
+        /** Product */
+        
+        /** Team */
+        Route::controller(TeamController::class)
+            ->prefix('team')
+            ->name('team.')
+            ->group(function () {
+                Route::any('/', 'index')->name('index');
+                Route::get('/create', 'create')->name('create');
+                Route::post('/insert', 'insert')->name('insert');
+                Route::get('/view/{id?}', 'view')->name('view');
+                Route::get('/edit/{id?}', 'edit')->name('edit');
+                Route::patch('/update', 'update')->name('update');
+                Route::post('/change-status', 'change_status')->name('change.status');
+                Route::post('/image-store', 'image_store')->name('image.store');
+                Route::post('/image-remove', 'image_remove')->name('image.remove');
+            });
+        /** Team */
     });
     Route::get("{path}", function () {
         return view('404');
