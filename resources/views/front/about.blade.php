@@ -77,74 +77,27 @@ About
 
             <div class="row">
 
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                    <div class="member" data-aos="fade-up">
-                        <div class="member-img">
-                            <img src="{{ asset('frontend/assets/img/team/avatar.jpg') }}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
+                @if(!empty($teams))
+                    @foreach($teams AS $team)
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="fade-up">
+                                <div class="member-img">
+                                    <img src="{{ $team['image'] }}" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href="{{ $team['twitter_url'] ?? '' }}"><i class="bi bi-twitter"></i></a>
+                                        <a href="{{ $team['facebook_url'] ?? '' }}"><i class="bi bi-facebook"></i></a>
+                                        <a href="{{ $team['instagram_url'] ?? '' }}"><i class="bi bi-instagram"></i></a>
+                                        <a href="{{ $team['linked_in_url'] ?? '' }}"><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $team['name'] ?? 'John Doe' }}</h4>
+                                </div>
                             </div>
                         </div>
-                        <div class="member-info">
-                            <h4>Suresh bhai N. Vaghasiya</h4>
-                            <span class="d-none">Chief Executive Officer</span>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
 
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member-img">
-                            <img src="{{ asset('frontend/assets/img/team/avatar.jpg') }}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Mahesh bhai D. Shingala</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                    <div class="member" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member-img">
-                            <img src="{{ asset('frontend/assets/img/team/avatar.jpg') }}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Jagdish bhai D. Vaghasiya</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                    <div class="member" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member-img">
-                            <img src="{{ asset('frontend/assets/img/team/avatar.jpg') }}" class="img-fluid" alt="">
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                        </div>
-                        <div class="member-info">
-                            <h4>Akshay bhai M. Shingala</h4>
-                        </div>
-                    </div>
-                </div>
 
             </div>
 

@@ -143,6 +143,22 @@ Route::group(['middleware' => ['prevent-back-history'], 'prefix' => 'admin', 'na
                 Route::post('/image-remove', 'image_remove')->name('image.remove');
             });
         /** Team */
+        
+        /** Counter */
+        Route::controller(CounterController::class)
+            ->prefix('counter')
+            ->name('counter.')
+            ->group(function () {
+                Route::any('/', 'index')->name('index');
+                Route::get('/create', 'create')->name('create');
+                Route::post('/insert', 'insert')->name('insert');
+                Route::get('/view/{id?}', 'view')->name('view');
+                Route::get('/edit/{id?}', 'edit')->name('edit');
+                Route::patch('/update', 'update')->name('update');
+                Route::post('/change-status', 'change_status')->name('change.status');
+            });
+        /** Counter */
+
     });
     Route::get("{path}", function () {
         return view('404');

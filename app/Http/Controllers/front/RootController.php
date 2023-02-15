@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Counter;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\ProductImage;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,11 +24,23 @@ class RootController extends Controller {
             ->leftjoin('products', 'product_images.product_id', 'products.id')
             ->leftjoin('product_categories', 'products.product_category_id', 'product_categories.id')
             ->take(6)->inRandomOrder()->get();
-        return view('front.index')->with('product_images' , $product_images);
+
+        $count = Counter::where('status', 'active')->get();
+        return view('front.index')->with(['product_images' => $product_images, 'count' => $count]);
     }
 
     public function about() {
-        return view('front.about');
+        $path = URL('/uploads/team') . '/';
+        $team = Team::select(
+            'name',
+            'facebook_url',
+            'twitter_url',
+            'linked_in_url',
+            'instagram_url',
+            DB::Raw("CASE WHEN " . 'image' . " != '' THEN CONCAT(" . "'" . $path . "'" . ", " . 'image' . ") ELSE CONCAT(" . "'" . $path . "'" . ", 'defaultAvatar.png')
+        END as image")
+        )->get();
+        return view('front.about')->with(['teams' => $team]);
     }
 
     public function product() {

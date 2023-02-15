@@ -46,6 +46,12 @@
                         <span class="hide-menu">Our Team</span>
                     </a>
                 </li>
+                <li class="sidebar-item {{ Request::is('admin/counter*') ? 'selected' : '' }}">
+                    <a class="sidebar-link {{ Request::is('admin/counter*') ? 'active' : '' }}" href="{{ route('admin.counter.index') }}" aria-expanded="false">
+                        <i class="fas fa-chart-pie"></i>
+                        <span class="hide-menu">Counters</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

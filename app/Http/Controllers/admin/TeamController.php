@@ -45,7 +45,7 @@ class TeamController extends Controller {
                     return $return;
                 })
                 ->editColumn('image', function ($data) {
-                    $image = '<img src="' . URL('/uploads/team/user-icon.jpg') . '" alt="user-icon" class="rounded-circle" width="45" height="45">';
+                    $image = '<img src="' . URL('/uploads/team/defaultAvatar.png') . '" alt="user-icon" class="rounded-circle" width="45" height="45">';
 
                     if ($data->image != '' || $data->image != null)
                         $image =  '<img src="' . URL('/uploads/team/') . "/" . $data->image . '" alt="user-icon" class="rounded-circle" width="45" height="45">';

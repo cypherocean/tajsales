@@ -55,22 +55,22 @@ Product Edit
 
                             <div class="form-group col-sm-6">
                                 <label for="facebook_url">Facebook URL</label>
-                                <input type="url" name="facebook_url" id="facebook_url" class="form-control" placeholder="Plese enter facebook_url" value="{{ $data->facebook_url ??'' }}">
+                                <input type="url" name="facebook_url" id="facebook_url" class="form-control" placeholder="Plese enter Facebook URL" value="{{ $data->facebook_url ??'' }}">
                                 <span class="kt-form__help error facebook_url"></span>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="instagram_url">Instagram URL</label>
-                                <input type="url" name="instagram_url" id="instagram_url" class="form-control" placeholder="Plese enter instagram_url" value="{{ $data->instagram_url ??'' }}">
+                                <input type="url" name="instagram_url" id="instagram_url" class="form-control" placeholder="Plese enter Instagram URL" value="{{ $data->instagram_url ??'' }}">
                                 <span class="kt-form__help error instagram_url"></span>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="twitter_url">Twitter URL</label>
-                                <input type="url" name="twitter_url" id="twitter_url" class="form-control" placeholder="Plese enter twitter_url" value="{{ $data->twitter_url ??'' }}">
+                                <input type="url" name="twitter_url" id="twitter_url" class="form-control" placeholder="Plese enter Twitter URL" value="{{ $data->twitter_url ??'' }}">
                                 <span class="kt-form__help error twitter_url"></span>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="linked_in_url">Linked-in URL</label>
-                                <input type="url" name="linked_in_url" id="linked_in_url" class="form-control" placeholder="Plese enter linked_in_url" value="{{ $data->linked_in_url ??'' }}">
+                                <input type="url" name="linked_in_url" id="linked_in_url" class="form-control" placeholder="Plese enter linked-in URL" value="{{ $data->linked_in_url ??'' }}">
                                 <span class="kt-form__help error linked_in_url"></span>
                             </div>
                         </div>
