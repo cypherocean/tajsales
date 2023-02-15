@@ -9,10 +9,10 @@
                      <strong>Address:</strong><br>
                      <p>
                      <p>{{ _address() }}</p><br>
-                     <strong>Phone:</strong><br> <a href="tel:+919913740441"> +91 99137 40441</a><br>
-                     <a href="tel:+919712731131">+91 97127 31131</a><br>
-                     <a href="tel:+919825356656">+91 98253 56656</a><br><br>
-                     <strong>Email:</strong><br> tajsales111@gmail.com<br>
+                     <strong>Phone:</strong><br> <a href="tel:+919913740441">{{ _settings('CONTACT_NUMBER') }}</a><br>
+                     <a href="tel:+919712731131">{{ _settings('ALTERNATE_CONTACT_NUMBER') }}</a><br>
+                     <a href="tel:+919825356656">{{ _settings('MAIN_CONTACT_NUMBER') }}</a><br><br>
+                     <strong>Email:</strong><br> {{ _settings('CONTACT_EMAIL') }}<br>
                      
                      </p>
                  </div>
@@ -20,7 +20,7 @@
                  <div class="col-lg-6 text-right col-md-3 footer-links">
                      <h4>Useful Links</h4>
                      <ul>
-                         <li><i class="bx bx-chevron-right"></i> <a href="href="{{ route('home') }}">Home</a></li>
+                         <li><i class="bx bx-chevron-right"></i> <a href="{{ route('home') }}">Home</a></li>
                          <li><i class="bx bx-chevron-right"></i> <a href="{{ route('about') }}">About us</a></li>
                          <li><i class="bx bx-chevron-right"></i> <a href="{{ route('product') }}">Products</a></li>
                          <li class="d-none"><i class="bx bx-chevron-right"></i> <a href="{{ route('client') }}">Clients</a></li>

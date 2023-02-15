@@ -11,9 +11,10 @@ class SettingSeeder extends Seeder{
         $general = [
             'SITE_TITLE' => 'Taj Sales', 
             'SITE_TITLE_SF' => 'TS', 
-            'CONTACT_NUMBER' => '+91-9898000001',
-            'MAIN_CONTACT_NUMBER' => '+91-9898000002',
-            'CONTACT_EMAIL' => 'info@tajsales.com',
+            'CONTACT_NUMBER' => '+91 99137 40441',
+            'ALTERNATE_CONTACT_NUMBER' => '+91 97127 31131',
+            'MAIN_CONTACT_NUMBER' => '+91 98253 56656',
+            'CONTACT_EMAIL' => 'tajsales111@gmail.com',
             'MAIN_CONTACT_EMAIL' => 'info@tajsales.com',
             'CONTACT_ADDRESS' => 'Plot No:22, Gulmohar Co.Op,So Ltd, Shimpoli Road, Borivali(West), Mumbai-400092',
             'MAIN_CONTACT_ADDRESS' => 'Branch/Courier Address:- D-1402 Sun South Park, South Bopal, Ahmedabad-38008'
