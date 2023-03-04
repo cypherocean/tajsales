@@ -10,44 +10,44 @@ Home
 @section('styles')
 <link rel="stylesheet" href="{{ asset('frontend/assets/css/fa.css') }}" />
 <style>
-.my_counter-box {
-	display: block;
-	background: #f6f6f6;
-	padding: 40px 20px 37px;
-	text-align: center
-}
+    .my_counter-box {
+        display: block;
+        background: #f6f6f6;
+        padding: 40px 20px 37px;
+        text-align: center
+    }
 
-.my_counter-box p {
-	margin: 5px 0 0;
-	padding: 0;
-	color: #909090;
-	font-size: 18px;
-	font-weight: 500
-}
+    .my_counter-box p {
+        margin: 5px 0 0;
+        padding: 0;
+        color: #909090;
+        font-size: 18px;
+        font-weight: 500
+    }
 
-.my_counter-box i {
-	font-size: 60px;
-	margin: 0 0 15px;
-	color: #d2d2d2
-}
+    .my_counter-box i {
+        font-size: 60px;
+        margin: 0 0 15px;
+        color: #d2d2d2
+    }
 
-.my_counter { 
-	display: block;
-	font-size: 32px;
-	font-weight: 700;
-	color: #666;
-	line-height: 28px
-}
+    .my_counter { 
+        display: block;
+        font-size: 32px;
+        font-weight: 700;
+        color: #666;
+        line-height: 28px
+    }
 
-.my_counter-box.colored {
-      background: #3acf87;
-}
+    .my_counter-box.colored {
+        background: #3acf87;
+    }
 
-.my_counter-box.colored p,
-.my_counter-box.colored i,
-.my_counter-box.colored .my_counter {
-	color: #fff
-}
+    .my_counter-box.colored p,
+    .my_counter-box.colored i,
+    .my_counter-box.colored .my_counter {
+        color: #fff
+    }
 </style>
 @endsection
 
@@ -79,13 +79,26 @@ Home
                         <p class="d-none">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
                             Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus
                             deleniti vel. Minus et tempore modi architecto.</p>
-                        <div class="text-center"><a href="{{ route('about') }}" class="btn-get-started">Read More</a></div>
+                        <div class="text-center"><a href="{{ route('about') }}" class="btn-get-started">Read More 123</a></div>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 3 -->
             <div class="carousel-item" style="background-image: url(frontend/assets/img/slide/slide3.jpg);">
+                <div class="carousel-container">
+                    <div class="carousel-content animate__animated animate__fadeInUp">
+                        <h2>Taj Sales</h2>
+                        <p class="d-none">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam.
+                            Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus
+                            deleniti vel. Minus et tempore modi architecto.</p>
+                        <div class="text-center"><a href="{{ route('about') }}" class="btn-get-started">Read More</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item" style="background-image: url(frontend/assets/img/slide/slide4.jpg);">
                 <div class="carousel-container">
                     <div class="carousel-content animate__animated animate__fadeInUp">
                         <h2>Taj Sales</h2>
